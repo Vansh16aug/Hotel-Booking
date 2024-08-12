@@ -1,9 +1,10 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 
 const initData = require("./data.js");
 const Listing = require("../models/listing.js");
 
-const MONGO_URL = "mongodb+srv://kanhaiyajee804418:58lYGjU6h5KxmDkn@cluster0.psookmx.mongodb.net/wanderlust"
+const MONGO_URL = process.env.MONGODB_URI;
 
 main()
   .then(() => {
